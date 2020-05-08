@@ -81,6 +81,7 @@ export default {
       width: 300px;
       margin: 0 24px;
     }
+    
     img {
       width: 300px;
       border-radius: 7px 7px 0 0;
