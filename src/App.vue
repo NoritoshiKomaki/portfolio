@@ -27,4 +27,35 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+
+
+@mixin under-bar {
+  a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  }
+  a::after {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #333;
+    transform: scale(0, 1);
+    transform-origin: center top;
+    transition: transform .3s;
+  }
+  a:hover::after {
+    transform: scale(1, 1);
+  }
+}
 </style>
