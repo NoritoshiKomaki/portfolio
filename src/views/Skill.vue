@@ -1,46 +1,46 @@
 <template>
-  <div>
+  <div class="body">
     <h1 class="title">Skill</h1>
     <div class="images">
       <div class="image">
-        <span>★ ★ ★</span>
         <img :src="html">
+        <p>★ ★ ★</p>
       </div>
       <div class="image">
-        <span>★ ★ ★</span>
         <img :src="css">
+        <p>★ ★ ★</p>
       </div>
       <div class="image">
-        <span>★ ★ ☆</span>
         <img :src="rails">
+        <p>★ ★ ☆</p>
       </div>
     </div>
     <div class="images">
       <div class="image">
-        <span>★ ★ ☆</span>
         <img :src="ruby">
+        <p>★ ★ ☆</p>
       </div>
       <div class="image">
-        <span>★ ★ ☆</span>
         <img :src="js">
+        <p>★ ★ ☆</p>
       </div>
       <div class="image">
-        <span>★ ★ ☆</span>
         <img :src="jquery">
+        <p>★ ★ ☆</p>
       </div>
     </div>
     <div class="images">
       <div class="image">
-        <span>★ ☆ ☆</span>
         <img :src="vue">
+        <p>★ ☆ ☆</p>
       </div>
       <div class="image">
-        <span>★ ★ ☆</span>
         <img :src="mysql">
+        <p>★ ★ ☆</p>
       </div>
       <div class="image">
-        <span>★ ★ ☆</span>
         <img :src="github">
+        <p>★ ★ ☆</p>
       </div>
     </div>
   </div>
@@ -65,25 +65,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.body {
+  flex: 1;
+  height: 100vh;
+  width: calc(100vh - 200px);
+  overflow: scroll;
   .images {
     text-align: center;
     display: flex;
     justify-content: center;
     .image {
-      position: relative;
-      span {
-        position: absolute;
-        font-size: 16px;
-        bottom: 8px;
-        left: 62px;
+      img {
+        width: 150px;
+        margin: 15px 30px 0 30px;
+        border-radius: 30px;
+        box-shadow: 0 0 10px gray;
+      }
+      p {
+        font-size: 20px;
         color: midnightblue;
+        margin-top: 5px;
       }
     }
-    img {
-      width: 120px;
-      margin: 10px 30px;
-      border-radius: 30px;
-      box-shadow: 0 0 10px gray;
-    }
   }
+}  
 </style>

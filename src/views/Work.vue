@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="body">
     <h1 class="title">Work</h1>
     <div class="images">
       <a :href="VoteUrl">
@@ -57,9 +57,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.body {
+  height: 100vh;
+  width: calc(100vh - 200px);
+  overflow: scroll;
+  flex: 1;
   .images {
     display: flex;
     justify-content: center;
+    margin-top: 70px;
     .image {
       height: 380px;
       background: white;
@@ -90,4 +96,5 @@ export default {
       line-height: 1.3;
     }
   }
+}
 </style>

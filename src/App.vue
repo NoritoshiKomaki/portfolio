@@ -2,20 +2,17 @@
   <div id="app">
     <global-header/>
     <router-view/>
-    <global-footer/>
   </div>
 </template>
 
 <script>
 import 'ress';
 import GlobalHeader from './components/GlobalHeader.vue';
-import GlobalFooter from './components/GlobalFooter.vue';
 
 export default {
   name: 'App',
   components: {
-    GlobalHeader,
-    GlobalFooter
+    GlobalHeader
   }
 }
 </script>
@@ -30,10 +27,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   line-height: 1;
   color: #333;
-  background-image: url("~@/assets/main.jpg");
+  display: flex;
 }
 .title {
-    margin: 36px;
+    padding-top: 72px;
+    padding-bottom: 36px;
     font-size: 56px;
     text-align: center;
   }
