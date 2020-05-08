@@ -30,6 +30,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   line-height: 1;
   color: #333;
+  background-image: url("~@/assets/main.jpg");
 }
 .title {
     margin: 36px;
