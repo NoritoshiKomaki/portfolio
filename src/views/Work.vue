@@ -103,15 +103,15 @@ a {
   position: relative;
   p {
     position: absolute;
-    bottom: 24px;
-    left: calc((100% - 146px) / 2);
+    bottom: 16px;
+    right: 16px;
+    // left: calc((100% - 146px) / 2);
     background: white;
     font-size: 16px;
     line-height: 1.5;
     padding: 5px;
     border: 2px solid midnightblue;
     color: midnightblue;
-    // font-weight: bold;
   }
 }
 img {
