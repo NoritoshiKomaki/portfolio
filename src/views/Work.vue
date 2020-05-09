@@ -2,20 +2,20 @@
   <div class="body">
     <h1 class="title">Work</h1>
     <div class="images">
-      <h2>FURIMA</h2>
-      <a :href="FurimaUrl">
+      <h2 id="titleA">FURIMA</h2>
+      <a :href="FurimaUrl" @mouseover="changeColorA" @mouseleave="returnColorA">
         <img :src="furima" />
       </a>
       <div class="image-bottom">
         <div class="left">
-          <h2>VoteApp</h2>
-          <a :href="VoteUrl">
+          <h2 id="titleB">VoteApp</h2>
+          <a :href="VoteUrl" @mouseover="changeColorB" @mouseleave="returnColorB">
             <img :src="vote" />
           </a>
         </div>
         <div class="right">
-          <h2>Code-Typing</h2>
-          <a :href="CodeUrl">
+          <h2 id="titleC">Code-Typing</h2>
+          <a :href="CodeUrl" @mouseover="changeColorC" @mouseleave="returnColorC">
             <img :src="code" />
           </a>
         </div>
@@ -36,6 +36,32 @@ export default {
       CodeUrl: "http://18.177.63.130/",
     };
   },
+  methods: {
+    changeColorA: function() {
+      let titleA = document.getElementById('titleA');
+      titleA.classList.add('changed')
+    },
+    returnColorA: function() {
+      let titleA = document.getElementById('titleA');
+      titleA.classList.remove('changed')
+    },
+    changeColorB: function() {
+      let titleB = document.getElementById('titleB');
+      titleB.classList.add('changed')
+    },
+    returnColorB: function() {
+      let titleB = document.getElementById('titleB');
+      titleB.classList.remove('changed')
+    },
+    changeColorC: function() {
+      let titleC = document.getElementById('titleC');
+      titleC.classList.add('changed')
+    },
+    returnColorC: function() {
+      let titleC = document.getElementById('titleC');
+      titleC.classList.remove('changed')
+    }
+  }
 };
 </script>
 
@@ -45,6 +71,7 @@ export default {
   width: calc(100vh - 200px);
   overflow: scroll;
   flex: 1;
+  padding-bottom: 50px;
   .images {
     text-align: center;
     .image-bottom {
@@ -70,6 +97,11 @@ export default {
       border: 3px solid midnightblue;
       color: midnightblue;
       background: white;
+    }
+    .changed {
+      color: white;
+      background: midnightblue;
+      transition: .3s;
     }
     p {
       padding: 0 30px;

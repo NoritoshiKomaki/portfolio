@@ -16,12 +16,13 @@
   background-size: cover;
   background-color:rgba(255,255,255,0.3);
   background-blend-mode:lighten;
+  padding-bottom: 50px;
   h1 {
     padding-top: 100px;
     font-size: 96px;
     letter-spacing: 8px;
     color: #81d742;
-    text-shadow: 0 0 10px black;
+    text-shadow: 0 0 10px #333;
     line-height: 1.2;
   }
   h2 {

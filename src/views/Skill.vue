@@ -70,6 +70,7 @@ export default {
   height: 100vh;
   width: calc(100vh - 200px);
   overflow: scroll;
+  padding-bottom: 50px;
   .images {
     text-align: center;
     display: flex;

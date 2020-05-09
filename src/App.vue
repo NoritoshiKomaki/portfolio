@@ -34,8 +34,10 @@ body {
 .title {
   padding-top: 72px;
   padding-bottom: 36px;
-  font-size: 56px;
+  font-size: 64px;
   text-align: center;
+  color: #81d742;
+  text-shadow: 0 0 5px #333;
 }
 ul {
   list-style: none;
