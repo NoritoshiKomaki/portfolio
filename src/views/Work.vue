@@ -8,8 +8,8 @@
       </a>
       <div class="image-bottom">
         <div class="left">
-          <h2>VoteApp</h2>
-          <a :href="VoteUrl">
+          <h2>{{ app }}</h2>
+          <a :href="{{ url}}">
             <img :src="vote" />
           </a>
         </div>
@@ -28,12 +28,12 @@
 export default {
   data() {
     return {
+      app: ["VoteApp", "Code-Typing"],
       vote: require("@/assets/vote.png"),
       furima: require("@/assets/furima.png"),
       code: require("@/assets/code.png"),
-      VoteUrl: "https://vote--app.herokuapp.com/",
-      FurimaUrl: "http://52.68.133.240/",
-      CodeUrl: "http://18.177.63.130/",
+      url: ["https://vote--app.herokuapp.com/", "http://18.177.63.130/"],
+      FurimaUrl: "http://52.68.133.240/"
     };
   },
 };
