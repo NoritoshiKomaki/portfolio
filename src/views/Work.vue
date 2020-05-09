@@ -3,27 +3,20 @@
     <h1 class="title">Work</h1>
     <div class="images">
       <h2 id="titleA">FURIMA</h2>
-      <a :href="FurimaUrl" @mouseover="changeColorA" @mouseleave="returnColorA">
+      <a :href="FurimaUrl" @mouseover="changeColorA" @mouseleave="returnColorA" target="_blank">
         <img :src="furima" />
+        <p>ユーザー名：hoge<br>パスワード：1111</p>
       </a>
       <div class="image-bottom">
         <div class="left">
           <h2 id="titleB">VoteApp</h2>
-          <a
-            :href="VoteUrl"
-            @mouseover="changeColorB"
-            @mouseleave="returnColorB"
-          >
+          <a :href="VoteUrl" @mouseover="changeColorB" @mouseleave="returnColorB" target="_blank">
             <img :src="vote" />
           </a>
         </div>
         <div class="right">
           <h2 id="titleC">Code-Typing</h2>
-          <a
-            :href="CodeUrl"
-            @mouseover="changeColorC"
-            @mouseleave="returnColorC"
-          >
+          <a :href="CodeUrl" @mouseover="changeColorC" @mouseleave="returnColorC" target="_blank">
             <img :src="code" />
           </a>
         </div>
@@ -100,10 +93,6 @@ export default {
       background: midnightblue;
       transition: 0.3s;
     }
-    p {
-      padding: 0 30px;
-      line-height: 1.3;
-    }
   }
 }
 a {
@@ -111,6 +100,19 @@ a {
   width: 360px;
   margin: 0 24px;
   margin-bottom: 24px;
+  position: relative;
+  p {
+    position: absolute;
+    bottom: 24px;
+    left: calc((100% - 146px) / 2);
+    background: white;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 5px;
+    border: 2px solid midnightblue;
+    color: midnightblue;
+    // font-weight: bold;
+  }
 }
 img {
   width: 360px;

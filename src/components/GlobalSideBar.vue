@@ -12,10 +12,10 @@
       <h1>Contact</h1>
       <ul>
         <li class="twitter">
-          <a :href="twitter"><v-fa :icon="['fab', 'twitter']" />Twitter</a>
+          <a :href="twitter" target="_blank"><v-fa :icon="['fab', 'twitter']" />Twitter</a>
         </li>
         <li class="github">
-          <a :href="github"><v-fa :icon="['fab', 'github']" />GitHub</a>
+          <a :href="github" target="_blank"><v-fa :icon="['fab', 'github']" />GitHub</a>
         </li>
       </ul>
     </div>
