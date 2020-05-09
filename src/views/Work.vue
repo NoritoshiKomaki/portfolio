@@ -9,13 +9,21 @@
       <div class="image-bottom">
         <div class="left">
           <h2 id="titleB">VoteApp</h2>
-          <a :href="VoteUrl" @mouseover="changeColorB" @mouseleave="returnColorB">
+          <a
+            :href="VoteUrl"
+            @mouseover="changeColorB"
+            @mouseleave="returnColorB"
+          >
             <img :src="vote" />
           </a>
         </div>
         <div class="right">
           <h2 id="titleC">Code-Typing</h2>
-          <a :href="CodeUrl" @mouseover="changeColorC" @mouseleave="returnColorC">
+          <a
+            :href="CodeUrl"
+            @mouseover="changeColorC"
+            @mouseleave="returnColorC"
+          >
             <img :src="code" />
           </a>
         </div>
@@ -38,30 +46,30 @@ export default {
   },
   methods: {
     changeColorA: function() {
-      let titleA = document.getElementById('titleA');
-      titleA.classList.add('changed')
+      let titleA = document.getElementById("titleA");
+      titleA.classList.add("changed");
     },
     returnColorA: function() {
-      let titleA = document.getElementById('titleA');
-      titleA.classList.remove('changed')
+      let titleA = document.getElementById("titleA");
+      titleA.classList.remove("changed");
     },
     changeColorB: function() {
-      let titleB = document.getElementById('titleB');
-      titleB.classList.add('changed')
+      let titleB = document.getElementById("titleB");
+      titleB.classList.add("changed");
     },
     returnColorB: function() {
-      let titleB = document.getElementById('titleB');
-      titleB.classList.remove('changed')
+      let titleB = document.getElementById("titleB");
+      titleB.classList.remove("changed");
     },
     changeColorC: function() {
-      let titleC = document.getElementById('titleC');
-      titleC.classList.add('changed')
+      let titleC = document.getElementById("titleC");
+      titleC.classList.add("changed");
     },
     returnColorC: function() {
-      let titleC = document.getElementById('titleC');
-      titleC.classList.remove('changed')
-    }
-  }
+      let titleC = document.getElementById("titleC");
+      titleC.classList.remove("changed");
+    },
+  },
 };
 </script>
 
@@ -78,17 +86,6 @@ export default {
       display: flex;
       justify-content: center;
     }
-    a {
-      color: #333;
-      width: 360px;
-      margin: 0 24px;
-      margin-bottom: 24px;
-    }
-    img {
-      width: 360px;
-      border-radius: 30px;
-      box-shadow: 0 0 10px #333;
-    }
     h2 {
       display: table;
       margin: 0 auto;
@@ -101,12 +98,49 @@ export default {
     .changed {
       color: white;
       background: midnightblue;
-      transition: .3s;
+      transition: 0.3s;
     }
     p {
       padding: 0 30px;
       line-height: 1.3;
     }
+  }
+}
+a {
+  color: #333;
+  width: 360px;
+  margin: 0 24px;
+  margin-bottom: 24px;
+}
+img {
+  width: 360px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px #333;
+}
+
+@media (max-width: 1024px) {
+  .body {
+    .images {
+      .image-bottom {
+        display: block;
+      }
+    }
+  }
+}
+@media (max-width: 896px) {
+  .body {
+    width: 100%;
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 480px) {
+  a {
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+  }
+  img {
+    width: 300px;
   }
 }
 </style>

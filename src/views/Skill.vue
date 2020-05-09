@@ -3,43 +3,43 @@
     <h1 class="title">Skill</h1>
     <div class="images">
       <div class="image">
-        <img :src="html">
+        <img :src="html" />
         <p>★ ★ ★</p>
       </div>
       <div class="image">
-        <img :src="css">
+        <img :src="css" />
         <p>★ ★ ★</p>
       </div>
       <div class="image">
-        <img :src="rails">
+        <img :src="rails" />
         <p>★ ★ ☆</p>
       </div>
     </div>
     <div class="images">
       <div class="image">
-        <img :src="ruby">
+        <img :src="ruby" />
         <p>★ ★ ☆</p>
       </div>
       <div class="image">
-        <img :src="js">
+        <img :src="js" />
         <p>★ ★ ☆</p>
       </div>
       <div class="image">
-        <img :src="jquery">
+        <img :src="jquery" />
         <p>★ ★ ☆</p>
       </div>
     </div>
     <div class="images">
       <div class="image">
-        <img :src="vue">
+        <img :src="vue" />
         <p>★ ☆ ☆</p>
       </div>
       <div class="image">
-        <img :src="mysql">
+        <img :src="mysql" />
         <p>★ ★ ☆</p>
       </div>
       <div class="image">
-        <img :src="github">
+        <img :src="github" />
         <p>★ ★ ☆</p>
       </div>
     </div>
@@ -50,18 +50,18 @@
 export default {
   data() {
     return {
-      html: require('@/assets/html.png'),
-      css: require('@/assets/css.png'),
-      rails: require('@/assets/Rails.png'),
-      ruby: require('@/assets/Ruby.png'),
-      js: require('@/assets/JavaScript.png'),
-      jquery: require('@/assets/jQuery.png'),
-      vue: require('@/assets/vue.png'),
-      mysql: require('@/assets/mySQL.png'),
-      github: require('@/assets/github.png'),
-    }
-  }
-}
+      html: require("@/assets/html.png"),
+      css: require("@/assets/css.png"),
+      rails: require("@/assets/Rails.png"),
+      ruby: require("@/assets/Ruby.png"),
+      js: require("@/assets/JavaScript.png"),
+      jquery: require("@/assets/jQuery.png"),
+      vue: require("@/assets/vue.png"),
+      mysql: require("@/assets/mySQL.png"),
+      github: require("@/assets/github.png"),
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -89,5 +89,27 @@ export default {
       }
     }
   }
-}  
+}
+@media (max-width: 896px) {
+  .body {
+    width: 100%;
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 600px) {
+  .body {
+    .images {
+      display: block;
+      .image {
+        img {
+          width: 200px;
+        }
+        p {
+          font-size: 24px;
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+}
 </style>

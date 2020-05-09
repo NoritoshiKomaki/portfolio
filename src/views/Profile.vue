@@ -47,10 +47,10 @@
 export default {
   data() {
     return {
-      komaki: require('@/assets/komaki.jpeg')
-    }
-  }
-}
+      komaki: require("@/assets/komaki.jpeg"),
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -69,22 +69,44 @@ export default {
       padding: 10px;
       box-shadow: 0 0 10px #333;
     }
-    img {
-      width: 240px;
-      border-radius: 50%;
-      margin-bottom: 30px;
-      box-shadow: 0 0 10px #333;
-    }
-    .list {
-      display: flex;
-      font-size: 18px;
-      font-weight: bold;
-      line-height: 1.3;
-      p {
-        width: 500px;
-        font-weight: normal;
-      }
-    }
+  }
+}
+img {
+  width: 240px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px #333;
+}
+.list {
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+p {
+  width: 500px;
+  font-weight: normal;
+}
+@media (max-width: 896px) {
+  .body {
+    width: 100%;
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 600px) {
+  p {
+    width: 300px;
+  }
+}
+@media (max-width: 480px) {
+  img {
+    width: 200px;
+  }
+  .list {
+    font-size: 12px;
+  }
+  p {
+    width: 200px;
   }
 }
 </style>

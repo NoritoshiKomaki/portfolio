@@ -68,7 +68,6 @@ export default {
       margin-bottom: 40px;
     }
     ul {
-      justify-content: center;
       font-size: 24px;
       li {
         margin-bottom: 20px;
@@ -86,6 +85,11 @@ export default {
         background: purple;
       }
     }
+  }
+}
+@media (max-width: 896px) {
+  .side-bar {
+    display: none;
   }
 }
 </style>

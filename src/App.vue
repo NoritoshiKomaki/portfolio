@@ -1,21 +1,27 @@
 <template>
   <div id="app">
+    <global-header />
     <global-side-bar />
     <transition mode="out-in">
       <router-view />
     </transition>
+    <global-footer />
   </div>
 </template>
 
 <script>
 import "ress";
 import GlobalSideBar from "./components/GlobalSideBar.vue";
+import GlobalHeader from "./components/GlobalHeader.vue";
+import GlobalFooter from "./components/GlobalFooter.vue";
 
 export default {
   name: "App",
   components: {
-    GlobalSideBar
-  }
+    GlobalSideBar,
+    GlobalHeader,
+    GlobalFooter,
+  },
 };
 </script>
 
@@ -75,5 +81,15 @@ a:hover::after {
 }
 .v-leave-active {
   transition: all 0.5s 0s ease;
+}
+@media (max-width: 896px) {
+  #app {
+    display: block;
+  }
+  .title {
+    padding-top: 96px;
+    padding-bottom: 24px;
+    font-size: 40px;
+  }
 }
 </style>
