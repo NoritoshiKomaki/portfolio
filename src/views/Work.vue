@@ -2,41 +2,24 @@
   <div class="body">
     <h1 class="title">Work</h1>
     <div class="images">
-      <a :href="VoteUrl">
-        <div class="image">
-          <img :src="vote">
-          <h2>VoteApp</h2>
-          <p>
-            プログラミング学習関連の投票アプリです。<br>
-            ・オススメオンライン教材<br>
-            ・MacBookのスペック<br>
-            ・オススメTwitterユーザー<br>
-            上記の3項目を投票、閲覧することができます。
-          </p>
-        </div>
-      </a>
+      <h2>FURIMA</h2>
       <a :href="FurimaUrl">
-        <div class="image">
-          <img :src="furima">
-          <h2>FURIMA</h2>
-          <p>
-            プログラミングスクールのチーム開発で作成したフリマアプリです。<br>
-            ・ID: hoge<br>
-            ・Pass: 1111<br>
-
-          </p>
-        </div>
+        <img :src="furima" />
       </a>
-      <a :href="CodeUrl">
-        <div class="image">
-          <img :src="code">
+      <div class="image-bottom">
+        <div class="left">
+          <h2>VoteApp</h2>
+          <a :href="VoteUrl">
+            <img :src="vote" />
+          </a>
+        </div>
+        <div class="right">
           <h2>Code-Typing</h2>
-          <p>
-            プログラミング言語に特化したタイピングアプリです。<br>
-            ユーザーログインするとスコアを登録することができ、ランキングに参加することができます。
-          </p>
+          <a :href="CodeUrl">
+            <img :src="code" />
+          </a>
         </div>
-      </a>
+      </div>
     </div>
   </div>
 </template>
@@ -45,15 +28,15 @@
 export default {
   data() {
     return {
-      vote: require('@/assets/vote.png'),
-      furima: require('@/assets/furima.png'),
-      code: require('@/assets/code.png'),
+      vote: require("@/assets/vote.png"),
+      furima: require("@/assets/furima.png"),
+      code: require("@/assets/code.png"),
       VoteUrl: "https://vote--app.herokuapp.com/",
       FurimaUrl: "http://52.68.133.240/",
-      CodeUrl: "http://18.177.63.130/"
-    }
-  }
-}
+      CodeUrl: "http://18.177.63.130/",
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -63,33 +46,28 @@ export default {
   overflow: scroll;
   flex: 1;
   .images {
-    display: flex;
-    justify-content: center;
-    margin-top: 70px;
-    .image {
-      height: 380px;
-      background: white;
-      box-shadow: 0 0 16px gray;
-      border-radius: 7px;
-      &:hover {
-        opacity: 0.6;
-        transition: .5s;
-      }
+    text-align: center;
+    .image-bottom {
+      display: flex;
+      justify-content: center;
     }
     a {
       color: #333;
-      width: 300px;
+      width: 360px;
       margin: 0 24px;
+      margin-bottom: 24px;
     }
-    
     img {
-      width: 300px;
-      border-radius: 7px 7px 0 0;
+      width: 360px;
+      border-radius: 30px;
+      box-shadow: 0 0 10px #333;
     }
     h2 {
       display: table;
-      margin: 10px auto;
-      border-bottom: 3px solid midnightblue;
+      margin: 0 auto;
+      margin-bottom: 24px;
+      padding: 5px;
+      border: 3px solid midnightblue;
       color: midnightblue;
     }
     p {

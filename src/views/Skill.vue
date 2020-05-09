@@ -79,7 +79,7 @@ export default {
         width: 150px;
         margin: 15px 30px 0 30px;
         border-radius: 30px;
-        box-shadow: 0 0 10px gray;
+        box-shadow: 0 0 10px #333;
       }
       p {
         font-size: 20px;
