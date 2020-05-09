@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <global-header />
+    <global-side-bar />
     <transition mode="out-in">
       <router-view />
     </transition>
@@ -9,13 +9,13 @@
 
 <script>
 import "ress";
-import GlobalHeader from "./components/GlobalHeader.vue";
+import GlobalSideBar from "./components/GlobalSideBar.vue";
 
 export default {
   name: "App",
   components: {
-    GlobalHeader,
-  },
+    GlobalSideBar
+  }
 };
 </script>
 
