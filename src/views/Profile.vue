@@ -82,6 +82,7 @@ export default {
       line-height: 1.3;
       p {
         width: 500px;
+        font-weight: normal;
       }
     }
   }
