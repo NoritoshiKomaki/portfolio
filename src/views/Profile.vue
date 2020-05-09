@@ -28,7 +28,7 @@
             <p>
               大学卒業後、京都の住宅設備機器の販売代理店の営業として1年半勤務。<br />
               その後愛知県の自動車工場のライン作業員として1年半勤務。<br />
-              再度転職し、京都の新工場立ち上げから組み立て作業員として勤務。<br />
+              再度転職し、京都の新工場立ち上げから組み立て作業員として4年半勤務。<br />
               独学でのプログラミング学習を経てプログラミングスクールのTECH::CAMPを卒業。<br />
               現在はプログラミング学習を進めつつ就職活動中。
             </p>
@@ -64,6 +64,11 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    .profile {
+      background: white;
+      padding: 10px;
+      box-shadow: 0 0 10px #333;
+    }
     img {
       width: 240px;
       border-radius: 50%;
