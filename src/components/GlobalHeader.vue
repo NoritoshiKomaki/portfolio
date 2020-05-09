@@ -43,6 +43,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 1;
   .top {
     ul {
       list-style: none;

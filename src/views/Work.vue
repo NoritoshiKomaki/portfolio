@@ -69,6 +69,7 @@ export default {
       padding: 5px;
       border: 3px solid midnightblue;
       color: midnightblue;
+      background: white;
     }
     p {
       padding: 0 30px;

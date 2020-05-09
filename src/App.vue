@@ -1,20 +1,22 @@
 <template>
   <div id="app">
-    <global-header/>
-    <router-view/>
+    <global-header />
+    <transition mode="out-in">
+      <router-view />
+    </transition>
   </div>
 </template>
 
 <script>
-import 'ress';
-import GlobalHeader from './components/GlobalHeader.vue';
+import "ress";
+import GlobalHeader from "./components/GlobalHeader.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    GlobalHeader
-  }
-}
+    GlobalHeader,
+  },
+};
 </script>
 
 <style lang="scss">
@@ -30,33 +32,46 @@ body {
   display: flex;
 }
 .title {
-    padding-top: 72px;
-    padding-bottom: 36px;
-    font-size: 56px;
-    text-align: center;
-  }
+  padding-top: 72px;
+  padding-bottom: 36px;
+  font-size: 56px;
+  text-align: center;
+}
 ul {
   list-style: none;
 }
 a {
-text-decoration: none;
-position: relative;
-display: inline-block;
-text-decoration: none;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
 }
 a::after {
   position: absolute;
   bottom: -7px;
   left: 0;
-  content: '';
+  content: "";
   width: 100%;
   height: 5px;
   border-radius: 50px;
   transform: scale(0, 1);
   transform-origin: center top;
-  transition: transform .3s;
+  transition: transform 0.3s;
 }
 a:hover::after {
   transform: scale(1, 1);
+}
+
+.v-enter {
+  transform: translate(-100%, 0);
+}
+.v-enter-active {
+  transition: all 1s 0s ease;
+}
+.v-leave-to {
+  transform: translate(100%, 0);
+}
+.v-leave-active {
+  transition: all 0.5s 0s ease;
 }
 </style>
