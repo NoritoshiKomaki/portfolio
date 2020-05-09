@@ -34,6 +34,7 @@
 }
 @media (max-width: 896px) {
   .body {
+    background-image: url("~@/assets/main2.jpg");
     width: 100%;
     padding-bottom: 100px;
   }
